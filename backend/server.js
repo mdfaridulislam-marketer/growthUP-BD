@@ -59,6 +59,8 @@ app.use((err, req, res, next) => {
 
 // ── Start Server ──
 const PORT = process.env.PORT || 3001;
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
 app.listen(PORT, () => {
   console.log(`✅ GrowthUp Pro Server চলছে → http://localhost:${PORT}`);
 });
+
